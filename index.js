@@ -7,7 +7,10 @@ const socketIo = require("socket.io");
 const server = http.createServer(app);
 
 const corsOptions = {
-  origin: ["http://localhost:3000"],
+  origin: [
+    "http://localhost:3000",
+    "https://master--dapper-chebakia-af5dff.netlify.app",
+  ],
   credentials: true,
 };
 app.use(cors(corsOptions));
