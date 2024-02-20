@@ -13,8 +13,8 @@ const corsOptions = {
   ],
   credentials: true,
 };
-app.use(cors(corsOptions));
-const io = socketIo(server);
+app.use(cors());
+const io = socketIo(server, { cors: { origin: "*" } });
 
 io.on("connection", (socket) => {
   console.log("New client connected");
